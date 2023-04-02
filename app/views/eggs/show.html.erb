@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @egg.title %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @egg.game %>
+</p>
+
+<p>
+  <strong>Diffrating:</strong>
+  <%= @egg.diffRating %>
+</p>
+
+<p>
+  <strong>Guide:</strong>
+  <%= @egg.guide %>
+</p>
+
+<%= link_to 'Edit', edit_egg_path(@egg) %> |
+<%= link_to 'Back', eggs_path %>
