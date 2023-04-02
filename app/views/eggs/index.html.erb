@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Eggs</h1>
+<h1>Freshest Eggs</h1>
 
 <table>
   <thead>
     <tr>
       <th>Title</th>
       <th>Game</th>
-      <th>Diffrating</th>
-      <th>Guide</th>
+      <th>Difficulty Rating</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +18,6 @@
         <td><%= egg.title %></td>
         <td><%= egg.game %></td>
         <td><%= egg.diffRating %></td>
-        <td><%= egg.guide %></td>
         <td><%= link_to 'Show', egg %></td>
         <td><%= link_to 'Edit', edit_egg_path(egg) %></td>
         <td><%= link_to 'Destroy', egg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
