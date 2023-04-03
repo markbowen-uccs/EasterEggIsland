@@ -1,4 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
+
+a {
+    font-size: larger;
+    font-family:fantasy;
+}
+
 h1 {
     color:aliceblue
 }
@@ -9,6 +15,7 @@ text {
 
 body {
     background-color: #000000;
+    padding: 15px;
 }
 
 .eggShell {

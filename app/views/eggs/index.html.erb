@@ -1,6 +1,12 @@
-<p id="notice"><%= notice %></p>
+
+<header>
+  <a href=<%= root_path %>>
+    <%=image_tag("EasterIslandHead.png", alt:"Site Logo", size:"40") %>Easter Egg Island
+  </a>
+</header>
 
 <h1>Freshest Eggs</h1>
+<button><%= link_to 'New Egg', new_egg_path %></button>
 
 <table>
   <thead>
@@ -19,8 +25,8 @@
         <td><%= egg.game %></td>
         <td><%= egg.diffRating %></td>
         <td><button><%= link_to 'View Egg', egg %></button></td>
-        <td><%= link_to 'Change Egg', edit_egg_path(egg) %></td>
-        <td><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button><%= link_to 'Change Egg', edit_egg_path(egg) %></button></td>
+        <td><button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -45,4 +51,4 @@
 
 <br>
 
-<%= link_to 'New Egg', new_egg_path %>
+
