@@ -18,13 +18,30 @@
         <td><%= egg.title %></td>
         <td><%= egg.game %></td>
         <td><%= egg.diffRating %></td>
-        <td><button><%= link_to 'View Egg', egg %><button></td>
+        <td><button><%= link_to 'View Egg', egg %></button></td>
         <td><%= link_to 'Change Egg', edit_egg_path(egg) %></td>
         <td><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<br>
+
+<% @eggs.each do |egg| %>
+  <div class="eggShell">
+    <h1><%= egg.title %></h1>
+    <h2><%= egg.game %></h2>
+    <h3>Difficulty: <%= egg.diffRating %></h3>
+    <h4>Guide:</h4>
+    <div class="yolk">
+      <p><%= egg.guide %></p>
+    </div>
+    <button><%= link_to 'View Egg', egg %></button>
+    <button><%= link_to 'Change Egg', edit_egg_path(egg) %></button>
+    <button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+  </div>
+<% end %>
 
 <br>
 
