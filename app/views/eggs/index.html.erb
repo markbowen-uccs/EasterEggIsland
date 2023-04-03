@@ -18,7 +18,7 @@
         <td><%= egg.title %></td>
         <td><%= egg.game %></td>
         <td><%= egg.diffRating %></td>
-        <td><%= link_to 'View Egg', egg %></td>
+        <td><button><%= link_to 'View Egg', egg %><button></td>
         <td><%= link_to 'Change Egg', edit_egg_path(egg) %></td>
         <td><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

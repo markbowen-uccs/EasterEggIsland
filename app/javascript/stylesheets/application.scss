@@ -16,13 +16,12 @@ table {
     margin: 10px 10px 5px;
     background-color: rgb(46, 213, 23);
     border-radius: 5px;
-
     color:aliceblue;
     column-width: 0px;
-    
 }
 
 // link style not working
-table :link{
-    border: #000000;
+table button{
+    border-width: 2px;
+    border: #eb0909;
 }
