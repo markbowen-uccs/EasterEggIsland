@@ -1,6 +1,28 @@
 @import "~bootstrap/scss/bootstrap";
+h1 {
+    color:aliceblue
+}
 
+text {
+    color:#f0f8ff
+}
 
 body {
     background-color: #000000;
+}
+
+table {
+    padding: 10px 10px 10px;
+    margin: 10px 10px 5px;
+    background-color: rgb(46, 213, 23);
+    border-radius: 5px;
+
+    color:aliceblue;
+    column-width: 0px;
+    
+}
+
+// link style not working
+table :link{
+    border: #000000;
 }
