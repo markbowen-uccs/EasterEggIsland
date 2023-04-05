@@ -5,7 +5,12 @@
   </a>
 </header>
 
+<br>
+
 <h1>Freshest Eggs</h1>
+
+<br>
+
 <button><%= link_to 'New Egg', new_egg_path %></button>
 
 <table>
@@ -13,7 +18,7 @@
     <tr>
       <th>Title</th>
       <th>Game</th>
-      <th>Difficulty Rating</th>
+      <th>Difficulty</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -40,9 +45,7 @@
     <h2><%= egg.game %></h2>
     <h3>Difficulty: <%= egg.diffRating %></h3>
     <h4>Guide:</h4>
-    <div class="yolk">
-      <p><%= egg.guide %></p>
-    </div>
+    <div class="yolk"><p><%= egg.guide %></p></div>
     <button><%= link_to 'View Egg', egg %></button>
     <button><%= link_to 'Change Egg', edit_egg_path(egg) %></button>
     <button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button>

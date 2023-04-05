@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :'Difficulty Rating(max:13)' %>
-    <%= form.number_field :diffRating %>
+    <%= form.label :'Difficulty' %>
+    <%= form.number_field :diffRating %>(max:13)
   </div>
 
   <div class="field">
@@ -32,6 +32,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <button><%= form.submit %></button>
   </div>
 <% end %>

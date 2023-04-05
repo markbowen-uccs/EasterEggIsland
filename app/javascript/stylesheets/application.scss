@@ -18,6 +18,12 @@ body {
     padding: 15px;
 }
 
+.formHeader h1 {
+    font-family: fantasy;
+    color:aquamarine
+
+}
+
 .eggShell {
     padding: 10px 10px 10px;
     margin: 10px 10px 5px;
@@ -30,19 +36,23 @@ body {
     padding: 5px 5px 5px;
     margin: 5px 5px 5px;
     background-color: aliceblue;
+    border-radius: 5px;
     color:#000000
 }
 
+.field {
+    color:aliceblue
+}
+
 table {
+    font-family: fantasy-light;
     padding: 10px 10px 10px;
     margin: 10px 10px 5px;
     background-color: rgb(46, 213, 23);
     border-radius: 5px;
     color:aliceblue;
-    column-width: 0px;
 }
 
-// link style not working
 .eggShell button{
     background-color: #36A9AE;
     color: #FFFFAF;

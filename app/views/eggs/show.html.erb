@@ -1,24 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @egg.title %>
-</p>
+<header>
+  <a href=<%= root_path %>>
+    <%=image_tag("EasterIslandHead.png", alt:"Site Logo", size:"40") %>Easter Egg Island
+  </a>
+</header>
 
-<p>
-  <strong>Game:</strong>
-  <%= @egg.game %>
-</p>
+<br>
 
-<p>
-  <strong>Difficulty Rating:</strong>
-  <%= @egg.diffRating %>
-</p>
+<div class=eggShell>
+  <h1>
+    <strong><%= @egg.title %></strong>
+    
+  </h1>
 
-<p>
-  <strong>Guide:</strong>
-  <%= @egg.guide %>
-</p>
+  <p>
+    <strong>Game:</strong>
+    <%= @egg.game %>
+  </p>
+
+  <p>
+    <strong>Difficulty Rating:</strong>
+    <%= @egg.diffRating %>
+  </p>
+
+  <p>
+    <strong>Guide:</strong>
+    <div class=yolk><%= @egg.guide %></div>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_egg_path(@egg) %> |
 <%= link_to 'Back', eggs_path %>
