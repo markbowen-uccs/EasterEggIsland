@@ -1,13 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<header>
-  <a href=<%= root_path %>>
-    <%=image_tag("EasterIslandHead.png", alt:"Site Logo", size:"40") %>Easter Egg Island
-  </a>
-</header>
-
-<br>
-
 <div class=eggShell>
   <h1>
     <strong><%= @egg.title %></strong>
@@ -30,5 +22,5 @@
   </p>
 </div>
 
-<%= link_to 'Edit', edit_egg_path(@egg) %> |
+<% if user_signed_in? %><%= link_to 'Edit', edit_egg_path(@egg) %> |<% end %>
 <%= link_to 'Back', eggs_path %>

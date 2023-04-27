@@ -1,28 +1,32 @@
 @import "~bootstrap/scss/bootstrap";
 
+body{
+    color:#f0f8ff;
+    background-color: #000000;
+    padding: 15px;
+}
+
 a {
     font-size: larger;
     font-family:fantasy;
 }
 
 h1 {
-    color:#36A9AE
+    font-family: fantasy;
+    color:#36A9AE;
 }
 
 text {
-    color:#f0f8ff
+    color:#f0f8ff;
 }
 
-body {
-    background-color: #000000;
-    padding: 15px;
+
+body, p, ol, ul, td {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 18px; 
 }
 
-.formHeader h1 {
-    font-family: fantasy;
-    color:aquamarine
-
-}
 
 .eggShell {
     padding: 10px 10px 10px;
@@ -41,7 +45,7 @@ body {
 }
 
 .field {
-    color:#f0f8ff
+    color:#f0f8ff;
 }
 
 table {
@@ -58,7 +62,16 @@ table {
     color: #FFFFAF;
     cursor: pointer;
     font-size: 17px;
-    width: 60%;
+    width: fit-content(20em);
     border-radius: 5px;
 
 }
+
+.navbar a{
+    color:#f0f8ff;
+}
+
+.navbar a:hover{
+    color:aqua;
+}
+

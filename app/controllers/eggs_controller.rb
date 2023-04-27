@@ -1,6 +1,7 @@
 class EggsController < ApplicationController
   before_action :set_egg, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, only: %i[ new edit create update destroy]
+  
   # GET /eggs or /eggs.json
   def index
     @eggs = Egg.all

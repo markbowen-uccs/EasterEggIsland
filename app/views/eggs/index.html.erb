@@ -1,12 +1,3 @@
-
-<header>
-  <a href=<%= root_path %>>
-    <%=image_tag("EasterIslandHead.png", alt:"Site Logo", size:"40") %>Easter Egg Island
-  </a>
-</header>
-
-<br>
-
 <h1>Freshest Eggs</h1>
 
 <br>
@@ -30,9 +21,11 @@
         <td><%= egg.game %></td>
         <td><%= egg.diffRating %></td>
         <td><button><%= link_to 'View Egg', egg %></button></td>
-        <td><button><%= link_to 'Change Egg', edit_egg_path(egg) %></button></td>
-        <td><button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
-      </tr>
+        <% if user_signed_in? %>
+          <td><button><%= link_to 'Change Egg', edit_egg_path(egg) %></button></td>
+          <td><button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        <% end %>       
+          </tr>
     <% end %>
   </tbody>
 </table>
@@ -47,8 +40,10 @@
     <h4>Guide:</h4>
     <div class="yolk"><p><%= egg.guide %></p></div>
     <button><%= link_to 'View Egg', egg %></button>
-    <button><%= link_to 'Change Egg', edit_egg_path(egg) %></button>
-    <button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    <% if user_signed_in? %>
+      <button><%= link_to 'Change Egg', edit_egg_path(egg) %></button>
+      <button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    <% end %> 
   </div>
 <% end %>
 
