@@ -41,5 +41,13 @@ describe "Egg Attribute Requirements on Edit", :type => :model do
         @egg.update(:game => "New Game")
         expect(@egg.game == "New Game")
     end
+    it "ensures the diffRating is present when editing game" do
+        @egg.update(:diffRating => 6)
+        expect(@egg.diffRating == 6)
+      end
+    it "ensures the guide is present when editing game" do
+        @egg.update(:guide => "New Guide Description")
+        expect(@egg.guide == "New Guide Description")
+    end
   end
 end

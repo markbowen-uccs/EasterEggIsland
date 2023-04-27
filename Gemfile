@@ -33,6 +33,7 @@ group :production do
  gem 'rails_12factor'
 end
  
+gem 'mini_racer'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
