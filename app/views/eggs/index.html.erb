@@ -1,8 +1,9 @@
-<h1>Freshest Eggs</h1>
+<center><h1>Freshest Eggs</h1></center>
+
+<center><button><%= link_to 'New Egg', new_egg_path %></button></center>
 
 <br>
-
-<button><%= link_to 'New Egg', new_egg_path %></button>
+<br>
 
 <table>
   <thead>
@@ -31,22 +32,27 @@
 </table>
 
 <br>
-
-<% @eggs.each do |egg| %>
-  <div class="eggShell">
-    <h1><%= egg.title %></h1>
-    <h2><%= egg.game %></h2>
-    <h3>Difficulty: <%= egg.diffRating %></h3>
-    <h4>Guide:</h4>
-    <div class="yolk"><p><%= egg.guide %></p></div>
-    <button><%= link_to 'View Egg', egg %></button>
-    <% if user_signed_in? %>
-      <button><%= link_to 'Change Egg', edit_egg_path(egg) %></button>
-      <button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button>
-    <% end %> 
+<div class="container_3col">
+  <div class="row justify-content-center">
+    <% @eggs.each do |egg| %>
+      
+      <div class="eggShell">
+        <h1><%= link_to egg.title, egg %></h1>
+        <h3><%= egg.game %></h3>
+        <h4>Difficulty: <%= egg.diffRating %></h4>
+        Guide:
+        <div class="yolk"><p><%= egg.guide %></p></div>
+        <button><%= link_to 'View Egg', egg %></button>
+        <% if user_signed_in? %>
+          <button><%= link_to 'Change Egg', edit_egg_path(egg) %></button>
+          <button><%= link_to 'Toss Egg', egg, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        <% end %> 
+      </div>
+    
+    <% end %>
   </div>
-<% end %>
-
+</div>
+  
 <br>
 
 

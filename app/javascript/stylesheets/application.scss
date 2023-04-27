@@ -12,6 +12,7 @@ a {
 }
 
 h1 {
+    font-size:70px ;
     font-family: fantasy;
     color:#36A9AE;
 }
@@ -27,8 +28,13 @@ body, p, ol, ul, td {
     line-height: 18px; 
 }
 
+.container_3col {
+    column-count:auto;
+}
 
 .eggShell {
+    
+    width:fit-content;
     padding: 10px 10px 10px;
     margin: 10px 10px 5px;
     background-color: #f0fff4;
@@ -51,15 +57,25 @@ body, p, ol, ul, td {
 table {
     font-family: fantasy-light;
     padding: 10px 10px 10px;
-    margin: 10px 10px 5px;
+    margin: auto;
     background-color: aliceblue;
     border-radius: 5px;
     color:#175E17;
 }
 
+button{
+    color:#36A9AE;
+    width: fit-content(20em);
+    border-radius: 5px;
+}
+
+.eggShell h1 {
+    font-size: 40px;
+    font-weight: lighter;
+}
 .eggShell button{
     background-color: #36A9AE;
-    color: #FFFFAF;
+    color: #000000;
     cursor: pointer;
     font-size: 17px;
     width: fit-content(20em);
