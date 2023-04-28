@@ -1,6 +1,6 @@
 <div class=formHeader><h1>Edit Your Egg</h1></div>
 
-<%= render 'form', egg: @egg %>
+<%= render 'form', egg: @egg, user: current_user %>
 
 <%= link_to 'Show', @egg %> |
 <%= link_to 'Back', eggs_path %>

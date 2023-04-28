@@ -22,7 +22,7 @@ class EggsController < ApplicationController
 
   # POST /eggs or /eggs.json
   def create
-    @egg = Egg.new(egg_params)
+    @egg = Egg.new(egg_params.merge(user_id: current_user.id))
 
     respond_to do |format|
       if @egg.save
@@ -38,7 +38,7 @@ class EggsController < ApplicationController
   # PATCH/PUT /eggs/1 or /eggs/1.json
   def update
     respond_to do |format|
-      if @egg.update(egg_params)
+      if @egg.update(egg_params.merge(user_id: current_user.id))
         format.html { redirect_to egg_url(@egg), notice: "Egg was successfully updated." }
         format.json { render :show, status: :ok, location: @egg }
       else
@@ -66,6 +66,7 @@ class EggsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def egg_params
-      params.require(:egg).permit(:title, :game, :diffRating, :guide)
+      params.require(:egg).permit(:title, :game, :diffRating, :guide, :user_id)
     end
+  
 end

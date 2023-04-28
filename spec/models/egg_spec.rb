@@ -2,6 +2,9 @@ require "rails_helper"
 
 
 describe "Egg Attribute Requirements on Create", :type => :model do
+  before do
+    @user = FactoryBot.build(:user)
+  end
   context "validation tests" do
     it "ensures the title is present when creating egg" do
       egg = Egg.new(game: "Game Name", diffRating: 6, guide: "Guide Description")

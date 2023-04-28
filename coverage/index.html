@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-04-27T06:46:02+00:00">2023-04-27T06:46:02+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-04-28T20:29:42+00:00">2023-04-28T20:29:42+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -106,7 +106,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#fe63e45120083e6a22103839eb7cdcf4b4b251e6" class="src_link" title="app/controllers/eggs_controller.rb">app/controllers/eggs_controller.rb</a></td>
             <td class="yellow strong cell--number t-file__coverage">88.24 %</td>
-            <td class="cell--number">71</td>
+            <td class="cell--number">72</td>
             <td class="cell--number">34</td>
             <td class="cell--number">30</td>
             <td class="cell--number">4</td>
@@ -172,7 +172,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#297da313675e93e811badcf7069cf341f61b8039" class="src_link" title="app/models/egg.rb">app/models/egg.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">2</td>
             <td class="cell--number">2</td>
             <td class="cell--number">0</td>
@@ -183,7 +183,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9f3cfde372995623d22fe364e49909e385c78c51" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">6</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">4</td>
@@ -264,7 +264,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#fe63e45120083e6a22103839eb7cdcf4b4b251e6" class="src_link" title="app/controllers/eggs_controller.rb">app/controllers/eggs_controller.rb</a></td>
             <td class="yellow strong cell--number t-file__coverage">88.24 %</td>
-            <td class="cell--number">71</td>
+            <td class="cell--number">72</td>
             <td class="cell--number">34</td>
             <td class="cell--number">30</td>
             <td class="cell--number">4</td>
@@ -424,7 +424,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#297da313675e93e811badcf7069cf341f61b8039" class="src_link" title="app/models/egg.rb">app/models/egg.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">2</td>
             <td class="cell--number">2</td>
             <td class="cell--number">0</td>
@@ -435,7 +435,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9f3cfde372995623d22fe364e49909e385c78c51" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">6</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">4</td>
@@ -1235,7 +1235,7 @@
 
             
 
-            <code class="ruby">    @egg = Egg.new(egg_params)</code>
+            <code class="ruby">    @egg = Egg.new(egg_params.merge(user_id: current_user.id))</code>
           </li>
         </div>
       
@@ -1411,7 +1411,7 @@
 
             
 
-            <code class="ruby">      if @egg.update(egg_params)</code>
+            <code class="ruby">      if @egg.update(egg_params.merge(user_id: current_user.id))</code>
           </li>
         </div>
       
@@ -1719,7 +1719,7 @@
 
             
 
-            <code class="ruby">      params.require(:egg).permit(:title, :game, :diffRating, :guide)</code>
+            <code class="ruby">      params.require(:egg).permit(:title, :game, :diffRating, :guide, :user_id)</code>
           </li>
         </div>
       
@@ -1736,6 +1736,17 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
             
             
 
@@ -2158,6 +2169,17 @@
 
             
 
+            <code class="ruby">    #belongs_to :user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
             <code class="ruby">end</code>
           </li>
         </div>
@@ -2249,7 +2271,29 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">  #has_many :eggs</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="8">
             
             
 

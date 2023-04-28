@@ -73,6 +73,7 @@
           1,
           9,
           null,
+          null,
           null
         ]
       },
@@ -86,6 +87,7 @@
         "lines": [
           1,
           1,
+          null,
           null
         ]
       },
@@ -164,12 +166,14 @@
           null,
           0,
           0,
+          null,
+          null,
           0
         ],
         "branches": {
         }
       }
     },
-    "timestamp": 1682577962
+    "timestamp": 1682713782
   }
 }
